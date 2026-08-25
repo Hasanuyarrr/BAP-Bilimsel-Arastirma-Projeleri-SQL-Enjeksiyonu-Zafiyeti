@@ -83,9 +83,7 @@ Test kapsamında fiilen gösterilen etki **gizliliğin tamamen ihlali** (veritab
 
 ## Etkilenen Sürümler
 
-Uygulama sürüm numarasını hiçbir yüzeyde ifşa etmemektedir; HTML çıktısında, hata sayfalarında ve HTTP yanıt başlıklarında sürüm bilgisi bulunmamaktadır. Uygulamanın bağımlılık tanım dosyası incelendiğinde, ürünün bilinen bir hazır çatı (Laravel, Symfony vb.) üzerine değil **kuruma özel/bespoke bir PHP çatısı** üzerine geliştirildiği ve dosyada üretici adı bulunmadığı görülmüştür. Bu nedenle **kesin bir etkilenen sürüm aralığı belirlenememiştir.**
-
-Zafiyet, 23–24 Ağustos 2026 tarihlerinde test edilen **iki bağımsız kurumun kurulumunda** doğrulanmıştır. Kurulumların altyapıları birbirinden tamamen farklı olduğu hâlde zafiyetin birebir aynı olması nedeniyle, üreticinin aynı kod tabanını kullanan **tüm kurulumlarının etkilenmiş kabul edilmesi** ve toplu biçimde güncellenmesi gerekmektedir.
+1.9.25
 
 ## Etkilenen Bileşen
 
