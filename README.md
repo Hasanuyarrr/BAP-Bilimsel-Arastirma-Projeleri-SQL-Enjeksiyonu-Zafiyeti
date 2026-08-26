@@ -96,7 +96,7 @@ Sunucu taraflı DataTables isteklerini karşılayan misafir bağlamındaki proje
 6. Uygulama günlükleri ve web sunucusu günlükleri, ilgili uç noktaya gelen olağandışı yoğunluktaki istekler açısından geriye dönük olarak incelenmelidir; kör çıkarım saldırıları binlerce benzer istek üretir ve günlüklerde belirgin bir iz bırakır.
 7. Erişim kayıtlarında istismar izine rastlanması hâlinde, `root` erişimiyle ulaşılabilen tüm veritabanlarının ihlal edilmiş kabul edilmesi ve ilgili mevzuat kapsamında değerlendirme yapılması gerekir.
 
-Kalıcı çözüm için üreticinin şunları yapması gerekmektedir:
+## Kalıcı çözüm için üreticinin şunları yapması gerekmektedir:
 
 - Filtre değerlerinin tamamı, dizi elemanları dâhil olmak üzere **parametrik sorgu (prepared statement)** ile bağlanmalıdır. `IN` listeleri için eleman sayısı kadar yer tutucu üretilmeli, değerler asla dizgi birleştirmeyle sorguya eklenmemelidir.
 - Filtre değerleri, kaçış uygulanmadan önce **tip düzeyinde doğrulanmalıdır**; sayısal kimlik bekleyen sütunlarda sayısal olmayan değerler kabul edilmemeli ve istek reddedilmelidir.
