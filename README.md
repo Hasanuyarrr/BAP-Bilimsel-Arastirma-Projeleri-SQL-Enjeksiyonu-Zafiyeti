@@ -78,7 +78,7 @@ Test kapsamında fiilen gösterilen etki **gizliliğin tamamen ihlali** (veritab
 
 ## Etkilenen Sürümler
 
-1.9.26
+1.9.26 ve öncesi
 
 ## Etkilenen Bileşen
 
