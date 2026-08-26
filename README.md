@@ -37,13 +37,11 @@ data=<DataTables filtre ve sütun tanımlarını içeren JSON dizisi>
 
 Zafiyet, doğrulanmış sütun üzerinden aşağıdaki davranışla kanıtlanmıştır *(sayısal değerler kurulumdan kurulumuma değişmekte, ancak doğru/yanlış ayrımı her iki kurulumda da net biçimde gözlenmektedir)*:
 
-| Gönderilen koşul | Dönen kayıt sayısı (Kurulum A) | Dönen kayıt sayısı (Kurulum B) |
-|---|---|---|
-| Filtresiz temel değer (baseline) | 328 | 88 |
-| Geçerli tek değer | 19 | 28 |
-| Her zaman **doğru** olan enjekte edilmiş koşul | 331 | 88 |
-| Her zaman **yanlış** olan enjekte edilmiş koşul | 19 | 28 |
-| Sonucu tamamen boşaltan enjekte edilmiş koşul | 0 | 0 |
+| Gönderilen koşul | Dönen kayıt sayısı (Kurulum A) | Dönen kayıt sayısı (Kurulum B) |Dönen kayıt sayısı (Kurulum c) |
+|---|---|---|---|
+| Her zaman **doğru** olan enjekte edilmiş koşul | 331 | 88 | 149 |
+| Her zaman **yanlış** olan enjekte edilmiş koşul | 19 | 28 | 0 | 
+
 
 Doğru ve yanlış koşulların birbirinden ayrılabilir iki farklı kayıt sayısı üretmesi, kör boolean tabanlı çıkarım için yeterli ve kararlı bir orakıl oluşturmaktadır. Bu orakıl kullanılarak her iki kurulumda da veritabanı sürümü, veritabanı adı, bağlanan kullanıcı (`root@localhost`), sunucu makine adı, şema ve tablo sayıları doğrulanmıştır.
 
