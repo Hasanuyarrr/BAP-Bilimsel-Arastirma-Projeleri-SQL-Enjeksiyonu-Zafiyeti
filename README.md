@@ -43,7 +43,7 @@ Zafiyet, doğrulanmış sütun üzerinden aşağıdaki davranışla kanıtlanmı
 | Her zaman **yanlış** olan enjekte edilmiş koşul | 19 | 28 | 0 | 
 
 
-Doğru ve yanlış koşulların birbirinden ayrılabilir iki farklı kayıt sayısı üretmesi, kör boolean tabanlı çıkarım için yeterli ve kararlı bir orakıl oluşturmaktadır. Bu orakıl kullanılarak her iki kurulumda da veritabanı sürümü, veritabanı adı, bağlanan kullanıcı (`root@localhost`), sunucu makine adı, şema ve tablo sayıları doğrulanmıştır.
+Doğru ve yanlış koşulların birbirinden ayrılabilir iki farklı kayıt sayısı üretmesi, kör boolean tabanlı çıkarım için yeterli ve kararlı bir orakıl oluşturmaktadır. Bu orakıl kullanılarak her üç kurulumda da veritabanı sürümü, veritabanı adı, bağlanan kullanıcı (`root@localhost`), sunucu makine adı, şema ve tablo sayıları doğrulanmıştır.
 
 Veritabanı yönetim sistemi, sunucuya özgü fonksiyonların davranış farkıyla **MySQL/MariaDB** olarak tespit edilmiştir; diğer veritabanı sistemlerine ait eşdeğer fonksiyonlar sunucu hatası üretmektedir.
 
@@ -58,9 +58,6 @@ Uygulamada eksik ve tutarsız da olsa bazı savunma unsurları bulunmakta; bunla
 
 Bu dört etken birlikte, **bu HTTP parametresi üzerinden tek adımda kod çalıştırmayı** engellemektedir. Ancak veri okuma, dosya okuma ve ayrıcalıklı veritabanı erişimi tamamen mümkündür; dolayısıyla zafiyetin şiddeti bu etkenlerle azalmamaktadır.
 
-### Aynı İstekte Denenip Zafiyetli Bulunmayan Parametreler
-
-Zafiyetin kapsamının doğru belirlenmesi açısından, aynı istek gövdesindeki diğer parametrelerin güvenli olduğu tespit edilmiştir: serbest metin arama alanı parametrik sorgu kullanmakta; görüntülenecek sütun listeleri bilinen sütun adlarına karşı beyaz listeye tabi tutulmakta; sıralama sütunu ve yönü enjekte edilememekte; operatör adları sabit bir haritadan okunmaktadır. `LIKE` operatörüne bağlanan sütun değerleri de kaçırılmaktadır.
 
 **Zafiyet münhasıran `IN` operatörüne bağlanan sütunların değerlerindedir.** Doğrulama `tur` sütunu üzerinden yapılmış olmakla birlikte, aynı operatöre bağlanan diğer sütunlar (`fakulte`, `bolum`, `bilimDali`, `Kategori`) da aynı kod yolunu kullandığından etkilenmiş kabul edilmelidir.
 
