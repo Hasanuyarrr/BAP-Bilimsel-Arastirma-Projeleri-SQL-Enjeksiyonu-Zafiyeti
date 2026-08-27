@@ -125,3 +125,4 @@ Hasan Hüseyin UYAR – Netlore Security
 |---|---|
 | 2026-08-23 | Zafiyet, yetkili bir sızma testi sırasında ilk kurulumda tespit edildi ve doğrulandı |
 | 2026-08-24 | Aynı zafiyet, bağımsız ikinci bir kurumun kurulumunda doğrulandı; ürün seviyesi zafiyet olarak sınıflandırıldı |
+| 2026-08-26 | CVE-2026-80468 kimliği Atandı |
