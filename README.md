@@ -113,7 +113,7 @@ Testler, ilgili kurumların yazılı izniyle yürütülen yetkili sızma testler
 
 ## CVE Kimliği
 
-Henüz atanmadı — CVE talebi beklemede
+CVE-2026-80468
 
 ## Bulan
 
